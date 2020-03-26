@@ -22,7 +22,12 @@ setup(
     install_requires = ['pypandoc>=1.4',
                         'pytest>=4.3.1',
                         'pytest-runner>=4.4',
+                        'click>=7.0'
     ],
+    entry_points = '''
+        [console_scripts]
+        titanic_analyses = titanic.command_line:titanic_analysis
+        '''
     setup_requires = ['pytest-runner'],
     tests_require = ['pytest'],
     # Substitute <github_account> with the name of your GitHub account
